@@ -1,0 +1,36 @@
+.button {
+    border: none;
+    border-radius: 99.9rem;
+    background-color: var(--blue);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--lighter);
+    padding: 1.6rem 3.2rem;
+    cursor: pointer;
+    transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+.button:hover {
+    background-color: var(--dark-blue);
+
+}
+
+.button:focus {
+    box-shadow: 0 0 12px rgba(92, 153, 245, 1);
+    outline: none;
+    /* Remove o outline padrão do navegador */
+    transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+        box-shadow 0.2s ease;
+    /* Transição suave para o ring */
+}
+
+.button:active {
+    background-color: var(--ligh);
+    box-shadow: none;
+    color: var(--blue);
+    outline: 2px solid var(--blue);
+    outline-offset: -2px;
+}
