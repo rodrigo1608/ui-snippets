@@ -1,0 +1,93 @@
+/* 
+  IMPORTANTE: Para que a bolinha (pseudo-elemento ::after) fique perfeitamente redondinha,
+  a largura (--switch-container-width) deve ser o dobro da altura (--switch-container-height).
+  Isso garante proporções corretas para um círculo e espaço simétrico para a animação de deslizamento.
+*/
+:root {
+    --dark: #777777;
+    --dark-gray: #999999;
+    --gray: #CCCCCC;
+    --light: #E0E0E0;
+    --lighter: #F2F2F2;
+    --blue: #A5C8FF;
+    --dark-blue: #7FADFF;
+    --darker-blue: #4A7FC9;
+    --switch-container-height: 50px;
+    --switch-container-width: 100px;
+    font-size: 62.52%;
+
+}
+
+body {
+    height: 100vh;
+    background-color: var(--lighter);
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.switch-container {
+    align-items: center;
+    display: flex;
+    height: var(--switch-container-height);
+    justify-content: center;
+    margin: 0 auto;
+    width: var(--switch-container-width);
+
+}
+
+.checkbox-element {
+    width: 0;
+    height: 0;
+}
+
+.switch-background {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50rem;
+    background-color: var(--gray);
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.switch-background:has(.checkbox-element:checked) {
+    background-color: #4BE27E;
+}
+
+.switch-background::after {
+    background-color: var(--lighter);
+    content: '';
+    display: flex;
+    height: 94%;
+    left: 2%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    border-radius: 99%;
+    transition: left .3s, transform .3s;
+}
+
+.switch-background:has(.checkbox-element:checked)::after {
+    left: calc(var(--switch-container-width) - 47%);
+
+    transition: left .3s, background-color .3s;
+    /* Move para a direita */
+}
+
+.switch-background:has(.checkbox-element:checked):hover::after {
+    outline: 2px solid #08C349;
+
+
+
+}
+
+.switch-background:hover::after {
+    outline: 2px solid var(--dark-gray);
+}
+
+.switch-background:active::after {
+    width: scale(0.9);
+}
