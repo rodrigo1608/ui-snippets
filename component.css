@@ -1,0 +1,8 @@
+.component__container {
+    display: flex;
+    gap: 2rem;
+}
+
+.component__container>* {
+    flex: 1 0 0%
+}
