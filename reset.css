@@ -146,6 +146,19 @@ section {
     display: block;
 }
 
+/* Remove o outline padrão apenas para elementos que NÃO usam teclado */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Adiciona um outline personalizado para foco acessível (teclado) */
+:focus-visible {
+    outline: 1px solid var(--dark-gray);
+    outline-offset: 1px;
+    box-shadow: 0 0 0 4px rgba(38, 38, 38, 0.2);
+    border-radius: 1.4rem;
+
+}
 body {
     line-height: 1;
     background-color: var(--light);
