@@ -97,21 +97,20 @@ video {
 }
 
 :root {
-    --dark: #262626;
-    --gray: #888888;
-    --light: #E8E8E8;
-    --lighter: #F2F2F2;
-    --yellow: #FADA5E;
-    --blue: #A5C8FF;
-    --dark-blue: #7FADFF;
-    --darker-blue: #4A7FC9;
+    --lighter: #E4E4E4;  
+    --light: #D6D6D6;
+    --gray: #C8C8C8;
+    --dark-gray: #404040;
+    --dark: #2C2C2C;
+    --darker: #181818;
+    --highlight:#95141E;
+    --brand:#2FA1C0;
+    --accent:#C5F8F9;
     --title-family: 'Montserrat';
-    --hero-height: calc(100vh - 142px);
-    color: #888888;
+    color: #2C2C2C;
     font-family: 'Noto Sans';
     font-size: 62.52%;
     font-weight: 300;
-
 }
 
 h1,
